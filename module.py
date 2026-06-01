@@ -213,7 +213,7 @@ else:
 
 
 """
-
+"""
 import datetime as dt
 
 print(dt.date.today())
@@ -271,5 +271,15 @@ date_obj = dt.datetime.strptime(date_string, "%d-%m-%Y")
 
 print(date_obj)
 
+"""
 
 # Calculate Days Left for New Year :
+
+from math import sqrt as s, pow as p
+
+print(s(25))
+print(p(2, 5))
+
+from math import *
+
+print(sqrt(25))
