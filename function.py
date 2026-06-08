@@ -209,108 +209,199 @@ print(Math(20, 10))
 # print(x())
 
 
-def greet():
-    print("Hello")
+# def greet():
+#     print("Hello")
 
 
-def call_func(func):
-    func()
+# def call_func(func):
+#     func()
 
 
-call_func(greet)
+# call_func(greet)
 
 
-def outer():
-    def inner():
-        print("Inner function")
-        return "Bye"
+# def outer():
+#     def inner():
+#         print("Inner function")
+#         return "Bye"
 
-    return inner
-
-
-f = outer
-
-print(f()())
+#     return inner
 
 
-def add(a, b):
-    return a + b
+# f = outer
+
+# print(f()())
 
 
-def sub(a, b):
-    return a - b
+# def add(a, b):
+#     return a + b
 
 
-ops = [add, sub]
-
-print(ops[0](10, 5))
-print(ops[1](10, 5))
+# def sub(a, b):
+#     return a - b
 
 
-def outer():
-    print("Outer function")
-    x = 10
+# ops = [add, sub]
 
-    def inner():
-        nonlocal x
-        y = 10
-        x = x + 20
-        print("Inner function")
-        print(x)
-
-    # print(y)
-
-    inner()
+# print(ops[0](10, 5))
+# print(ops[1](10, 5))
 
 
-outer()
+# def outer():
+#     print("Outer function")
+#     x = 10
+
+#     def inner():
+#         nonlocal x
+#         y = 10
+#         x = x + 20
+#         print("Inner function")
+#         print(x)
+
+#     # print(y)
+
+#     inner()
 
 
-x = 10
+# outer()
 
 
-def change():
-    global x
-    x = x + 5
-    print(x)
+# x = 10
 
 
-change()
-print(x)
+# def change():
+#     global x
+#     x = x + 5
+#     print(x)
 
 
-def fact(n):
-    if n == 1 or n == 0:
-        return 1
-    return n * fact(n - 1)
+# change()
+# print(x)
 
 
-print(fact(500))
-
-# 1 to 10 -> Sum
-
-
-def sum(n):
-    if n == 1:
-        return 1
-    return n + sum(n - 1)
+# def fact(n):
+#     if n == 1 or n == 0:
+#         return 1
+#     return n * fact(n - 1)
 
 
-print(sum(10))
+# print(fact(500))
+
+# # 1 to 10 -> Sum
+
+
+# def sum(n):
+#     if n == 1:
+#         return 1
+#     return n + sum(n - 1)
+
+
+# print(sum(10))
 
 # 1 1 2 3 5 8
 
 
-def fibo(n):
-    if n == 1 or n == 2:
-        return 1
-    return fibo(n - 1) + fibo(n - 2)
+# def fibo(n):
+#     if n == 1 or n == 2:
+#         return 1
+#     return fibo(n - 1) + fibo(n - 2)
 
 
-print(fibo(5))
-print(fibo(40))
+# print(fibo(5))
+# print(fibo(40))
 
 # for i in range(1, 10 + 1):
 #     print(fibo(i))
 # 5 -> 1 1 2 3 5
 # 10 -> 1 1 2 3 5 8 13 21 34 55
+
+
+d = {}
+
+"""
+d = {
+    2:1
+    1:1
+    3:2
+    4:3
+}
+"""
+
+
+def fibo(n):
+    if n in d:
+        return d[n]
+    elif n == 1:
+        d[1] = 1
+        return 1
+    elif n == 2:
+        d[2] = 1
+        return 1
+    else:
+        d[n] = fibo(n - 1) + fibo(n - 2)
+        return fibo(n - 1) + fibo(n - 2)
+
+
+print(fibo(100))
+
+# reverse string
+# ram -> mar
+# s = m -> ra
+# s = ma -> r
+# s = mar -> ""
+
+
+def reverse(s):
+    if len(s) == 0:
+        return ""
+    return s[-1] + reverse(s[:-1])
+
+
+print(reverse("Ram"))
+
+
+# count digit of number
+# 456 -> 3
+# 1 -> 1
+# 9 -> 1
+
+
+# 456 -> 45 -> 4
+def d_count(n):
+    if n < 10:
+        return 1
+    return 1 + d_count(n // 10)
+
+
+print(d_count(456))
+
+# power : base ^ expo
+# 2^6 ->
+
+"""
+5! -> 5 * 4! -> 4 * 3! -> 3 * 2! -> 2 * 1!
+
+2^6 -> 2^1 * 2^5 -> 2^1 * 2^4 -> 2^1 * 2^0
+"""
+
+
+# def power(b, e):
+#     if e == 0:
+#         return 1
+#     return b * power(b, e - 1)
+
+
+# print(power(2, 6))
+
+
+# sum of digit of number
+# 456 -> 15
+
+
+def sum_digit(n):
+    if n < 10:
+        return n
+    return n % 10 + sum_digit(n // 10)
+
+
+print(sum_digit(45666))
