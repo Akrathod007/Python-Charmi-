@@ -210,149 +210,300 @@
 # my_playlist2.show_songs()
 
 
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.__marks = marks
+
+#     def setMarks(self, marks):
+#         self.__marks = marks
+
+#     def getMarks(self):
+#         return self.__marks
+
+
+# s1 = Student("Ram", 98)
+
+# print(s1.name)
+# # print(s1.__marks)
+# # s1.setMarks(90)
+# print(s1.getMarks())
+
+
+# class Animal:
+
+#     def eat(self):
+#         print("Animals eat food")
+
+
+# class Dog(Animal):
+
+#     def bark(self):
+#         print("Dog barks")
+
+
+# d = Dog()
+
+# d.eat()
+# d.bark()
+
+
+# class Father:
+#     def skill1(self):
+#         print("Driving")
+
+
+# class Mother:
+#     def skill2(self):
+#         print("Cooking")
+
+
+# class Child(Father, Mother):
+#     def skill3(self):
+#         print("Playing")
+
+
+# c = Child()
+# c.skill1()
+# c.skill2()
+# c.skill3()
+
+
+# class Grandfather:
+#     def house(self):
+#         print("Grandfather's house")
+
+
+# class Father(Grandfather):
+#     def car(self):
+#         print("Father's car")
+
+
+# class Son(Father):
+#     def bike(self):
+#         print("Son's bike")
+
+
+# s = Son()
+
+# s.house()
+# s.car()
+# s.bike()
+
+
+# class Animal:
+#     def eat(self):
+#         print("Animals eat food")
+
+
+# class Dog(Animal):
+#     pass
+
+
+# class Cat(Animal):
+#     pass
+
+
+# d = Dog()
+# c = Cat()
+
+# d.eat()
+# c.eat()
+
+
+# """
+#     Vehicle
+#      /  \
+# normal  sprots
+#   car     car
+#     \    /
+#       Electric
+#        car
+# """
+
+
+# class Animal:
+
+#     def sound(self):
+#         print("Animals make sound")
+
+
+# class Dog(Animal):
+
+#     def sound(self):
+#         super().sound()
+#         print("Dog barks")
+
+
+# d = Dog()
+# d.sound()
+
+
+# class Person:
+
+#     def __init__(self, name):
+#         self.name = name
+
+
+# class Student(Person):
+
+#     def __init__(self, name, marks):
+#         super().__init__(name)
+#         self.marks = marks
+
+
+# s = Student("Ansh", 95)
+
+# print(s.name)
+# print(s.marks)
+
+
+# class Math:
+#     def add(self, a, b, c=10):
+#         return a + b + c
+
+
+# m = Math()
+# print(m.add(10, 20))
+# print(m.add(10, 20, 30))
+
+
+# class Animal:
+
+#     def sound(self):
+#         print("Animals make sound")
+
+
+# class Dog(Animal):
+
+#     def sound(self):
+#         print("Dog barks")
+
+
+# class Cat(Animal):
+
+#     def sound(self):
+#         print("Cat meows")
+
+
+# d = Dog()
+# c = Cat()
+
+# d.sound()
+# c.sound()
+
+
+# class Dog:
+#     def sound(self):
+#         print("Dog barks")
+
+
+# class Cat:
+#     def sound(self):
+#         print("Cat meows")
+
+
+# def make_sound(animal):
+#     animal.sound()
+
+
+# d = Dog()
+# c = Cat()
+# print(Dog())
+# make_sound(d)
+# make_sound(c)
+
+
+# from abc import ABC, abstractmethod
+
+
+# class Shape(ABC):
+#     @abstractmethod
+#     def area(self):
+#         pass
+
+
+# class Square(Shape):
+#     def area(self):
+#         print("Square Area")
+
+
+# class Triangle(Shape):
+#     def area(self):
+#         print("Triangle Area")
+
+
+# s = Square()
+# s.area()
+
+# t = Triangle()
+# t.area()
+
+
+# class Student:
+#     school = "ABC School"
+
+#     def __init__(self, name):
+#         self.name = name
+
+#     @classmethod
+#     def change_school(cls, new_name):
+#         cls.school = new_name
+
+
+# Student.change_school("XYZ School")
+
+# print(Student.school)
+
+# no1 = 10
+# no2 = 20
+# print(type(no1))
+# print(type(no2))
+# print(no1 + no2)
+
+# print(5 + 3)
+# print(type("Hello"))
+# print("hello" + "world")
+
+
 class Student:
-    def __init__(self, name, marks):
-        self.name = name
-        self.__marks = marks
-
-    def setMarks(self, marks):
-        self.__marks = marks
-
-    def getMarks(self):
-        return self.__marks
-
-
-s1 = Student("Ram", 98)
-
-print(s1.name)
-# print(s1.__marks)
-# s1.setMarks(90)
-print(s1.getMarks())
-
-
-class Animal:
-
-    def eat(self):
-        print("Animals eat food")
-
-
-class Dog(Animal):
-
-    def bark(self):
-        print("Dog barks")
-
-
-d = Dog()
-
-d.eat()
-d.bark()
-
-
-class Father:
-    def skill1(self):
-        print("Driving")
-
-
-class Mother:
-    def skill2(self):
-        print("Cooking")
-
-
-class Child(Father, Mother):
-    def skill3(self):
-        print("Playing")
-
-
-c = Child()
-c.skill1()
-c.skill2()
-c.skill3()
-
-
-class Grandfather:
-    def house(self):
-        print("Grandfather's house")
-
-
-class Father(Grandfather):
-    def car(self):
-        print("Father's car")
-
-
-class Son(Father):
-    def bike(self):
-        print("Son's bike")
-
-
-s = Son()
-
-s.house()
-s.car()
-s.bike()
-
-
-class Animal:
-    def eat(self):
-        print("Animals eat food")
-
-
-class Dog(Animal):
-    pass
-
-
-class Cat(Animal):
-    pass
-
-
-d = Dog()
-c = Cat()
-
-d.eat()
-c.eat()
-
-
-"""
-    Vehicle
-     /  \
-normal  sprots       
-  car     car
-    \    /
-      Electric 
-       car
-"""
-
-
-class Animal:
-
-    def sound(self):
-        print("Animals make sound")
-
-
-class Dog(Animal):
-
-    def sound(self):
-        super().sound()
-        print("Dog barks")
-
-
-d = Dog()
-d.sound()
-
-
-class Person:
-
     def __init__(self, name):
         self.name = name
 
+    def __str__(self):
+        return f"Student Name: {self.name}"
 
-class Student(Person):
-
-    def __init__(self, name, marks):
-        super().__init__(name)
-        self.marks = marks
+    def __display__(self):
+        print("Hello")
 
 
-s = Student("Ansh", 95)
+s = Student("Ram")
+print(s)
 
-print(s.name)
-print(s.marks)
+# s.__display__()
+
+
+class Number:
+    def __init__(self, value):
+        self.value = value
+
+    def __add__(self, other):
+        print(self.value)
+        print(other.value)
+        return self.value * other.value
+
+
+n1 = Number(10)
+n2 = Number(20)
+print(n1 + n2)
+
+print(isinstance(s, Number))
+
+
+class Demo:
+    def __call__(self):
+        print("Object is called like function")
+
+
+d = Demo()
+d()
