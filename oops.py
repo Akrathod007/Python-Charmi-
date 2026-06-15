@@ -507,3 +507,23 @@ class Demo:
 
 d = Demo()
 d()
+
+
+class College:
+    def __init__(self, name):
+        self.name = name
+
+    class Student:
+        def __init__(self, sname, marks):
+            self.sname = sname
+            self.marks = marks
+
+        def show(self):
+            print(self.sname, self.marks)
+
+
+c = College("007 College")
+s = College.Student("Ram", 90)
+
+print(c.name)
+s.show()
