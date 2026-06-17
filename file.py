@@ -92,15 +92,32 @@
 # f2.write(data)
 # f2.close()
 
-f = open("employee.csv", "r")
-data = f.read()
-print(data)
-f.close()
+# f = open("employee.csv", "r")
+# data = f.read()
+# print(data)
+# f.close()
 
-from PIL import Image
+# from PIL import Image
 
-# Open the image file
-img = Image.open("image1.jpeg")
+# img = Image.open("image1.jpeg")
 
-# Display the image
-img.show()
+# img.show()
+
+
+vowel = "aeiouAEIOU"
+count = 0
+with open("example1.txt", "r") as f, open("Demo.txt", "w") as f2:
+    for i in f:
+        for j in i:
+            if j not in vowel:
+                count += 1
+print(count)
+
+
+with open("example1.txt", "r") as f:
+    text = f.read()
+    lines = text.splitlines()
+    words = text.split()
+    print("lines:", len(lines))
+    print("words", len(words))
+    print("chars", len(text))
