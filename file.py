@@ -96,3 +96,11 @@ f = open("employee.csv", "r")
 data = f.read()
 print(data)
 f.close()
+
+from PIL import Image
+
+# Open the image file
+img = Image.open("image1.jpeg")
+
+# Display the image
+img.show()
