@@ -83,11 +83,16 @@
 # f2 = open("bheem2.png", "wb")
 # f2.write(data)
 
-f = open("audio2.mp3", "rb")
+# f = open("audio2.mp3", "rb")
+# data = f.read()
+# print(data)
+# f.close()
+
+# f2 = open("song.mp3", "wb")
+# f2.write(data)
+# f2.close()
+
+f = open("employee.csv", "r")
 data = f.read()
 print(data)
 f.close()
-
-f2 = open("song.mp3", "wb")
-f2.write(data)
-f2.close()
